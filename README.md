@@ -5,4 +5,4 @@ To play the menu song, you must unzip the '/bin/Debug/Media/song.7z' file right 
 
 Enjoy the journey!
 
-![image](https://github.com/starlyn1232/TicTacTocAI/assets/41921942/bf17fb0f-db35-4ebb-9e2c-13252e7f6912)
+![image](https://github.com/starlyn1232/TicTacTocAI/assets/41921942/30dc4157-0d97-462b-ad14-20fa75a5f2d5)
