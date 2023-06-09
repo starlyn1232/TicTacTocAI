@@ -87,7 +87,7 @@ namespace TicToc
         }
 
         //Process Pic Click
-        private void PicClick(PictureBox pic, bool state = false)
+        private void PicClick(PictureBox pic, bool state = false, int index = 0)
         {
             Task.Run(() =>
             {
@@ -99,33 +99,9 @@ namespace TicToc
                 short val = (short)(circle ? 1 : 0);
 
                 //Set flag
-                if (pic.Name == "picBox1")
-                    values[0] = val;
-
-                else if (pic.Name == "picBox2")
-                    values[1] = val;
-
-                else if (pic.Name == "picBox3")
-                    values[2] = val;
-
-                else if (pic.Name == "picBox4")
-                    values[3] = val;
-
-                else if (pic.Name == "picBox5")
-                    values[4] = val;
-
-                else if (pic.Name == "picBox6")
-                    values[5] = val;
-
-                else if (pic.Name == "picBox7")
-                    values[6] = val;
-
-                else if (pic.Name == "picBox8")
-                    values[7] = val;
-
-                else if (pic.Name == "picBox9")
-                    values[8] = val;
-
+                if (index > 0)
+                    values[index] = val;
+                
                 //Define image
                 pic.Image = circle ?
                     Properties.Resources.circle :
@@ -327,47 +303,47 @@ namespace TicToc
         //Squares click events
         private void picBox1_Click(object sender, EventArgs e)
         {
-            PicClick(picBox1, cpuPlaying);
+            PicClick(picBox1, cpuPlaying, 0);
         }
 
         private void picBox2_Click(object sender, EventArgs e)
         {
-            PicClick(picBox2, cpuPlaying);
+            PicClick(picBox2, cpuPlaying, 1);
         }
 
         private void picBox3_Click(object sender, EventArgs e)
         {
-            PicClick(picBox3, cpuPlaying);
+            PicClick(picBox3, cpuPlaying, 2);
         }
 
         private void picBox4_Click(object sender, EventArgs e)
         {
-            PicClick(picBox4, cpuPlaying);
+            PicClick(picBox4, cpuPlaying, 3);
         }
 
         private void picBox5_Click(object sender, EventArgs e)
         {
-            PicClick(picBox5, cpuPlaying);
+            PicClick(picBox5, cpuPlaying, 4);
         }
 
         private void picBox6_Click(object sender, EventArgs e)
         {
-            PicClick(picBox6, cpuPlaying);
+            PicClick(picBox6, cpuPlaying, 5);
         }
 
         private void picBox7_Click(object sender, EventArgs e)
         {
-            PicClick(picBox7, cpuPlaying);
+            PicClick(picBox7, cpuPlaying, 6);
         }
 
         private void picBox8_Click(object sender, EventArgs e)
         {
-            PicClick(picBox8, cpuPlaying);
+            PicClick(picBox8, cpuPlaying, 7);
         }
 
         private void picBox9_Click(object sender, EventArgs e)
         {
-            PicClick(picBox9, cpuPlaying);
+            PicClick(picBox9, cpuPlaying, 8);
         }
 
         //Key event
@@ -398,31 +374,31 @@ namespace TicToc
             cpu = state;
 
             if (index == 1)
-                PicClick(picBox1, state);
+                PicClick(picBox1, state, 0);
 
             else if (index == 2)
-                PicClick(picBox2, state);
+                PicClick(picBox2, state, 1);
 
             else if (index == 3)
-                PicClick(picBox3, state);
+                PicClick(picBox3, state, 2);
 
             else if (index == 4)
-                PicClick(picBox4, state);
+                PicClick(picBox4, state, 3);
 
             else if (index == 5)
-                PicClick(picBox5, state);
+                PicClick(picBox5, state, 4);
 
             else if (index == 6)
-                PicClick(picBox6, state);
+                PicClick(picBox6, state, 5);
 
             else if (index == 7)
-                PicClick(picBox7, state);
+                PicClick(picBox7, state, 6);
 
             else if (index == 8)
-                PicClick(picBox8, state);
+                PicClick(picBox8, state, 7);
 
             else if (index == 9)
-                PicClick(picBox9, state);
+                PicClick(picBox9, state, 8);
         }
 
         //Let's prepare a IA that can defeat you...
